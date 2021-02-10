@@ -1,0 +1,15 @@
+.fas{
+    cursor: pointer;
+}
+.card-footer{
+    margin-top: 2rem;
+    background-color: white;
+}
+.row{
+    margin-top: 10px;
+    border: 0px;
+}
+img{
+    border-radius: 20px;
+    margin-top: 10px;
+}
