@@ -1,10 +1,9 @@
 var weather = {
     "apiKey": "eb28a26b82f2355194c831d9ca69f91a",
-    fetchWeather: function (city) {
-        fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${this.apiKey}`)
-            .then((response) => response.json())
-            .then((data) => this.displayWeather(data));
-
+    fetchWeather: async function (city) {
+        const response = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${this.apiKey}`);
+        const data = await response.json();
+        this.displayWeather(data);
     },
     displayWeather: function (data) {
         const { name } = data;
@@ -21,7 +20,6 @@ var weather = {
         document.querySelector('.wind').innerText = `Wind Speed: ${speed}`;
         document.querySelector('.country').innerText = `Country : ${country}`;
 
-        var x = "red";
         var color = Math.floor(temp);
         console.log(color);
         if (color > 0) {
