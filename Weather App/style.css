@@ -4,10 +4,13 @@ body {
   align-items: center;
   margin-top: 300px;
   font-family: 'Open Sans', sans-serif;
-  background: #222;
-  background: rgb(2,0,36);
+  
   background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(131,64,64,1) 69%, rgba(0,212,255,1) 100%);
   font-size: 120%;
+  -webkit-transition: background-color 2s ease-in-out;
+  -moz-transition: background-color 2s ease-in-out;
+  -o-transition: background-color 2s ease-in-out;
+  transition: background-color 2s ease-in-out;
 }
 .card{
     text-align: center;
